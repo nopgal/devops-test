@@ -20,6 +20,7 @@ def stringUpdate(stringToUpdate, case_action):
 
 def main(argv):
    
+   # reading arguments into stringToUpdate and case_action
    stringToUpdate = ''
    case_action = ''
    try:
@@ -37,15 +38,11 @@ def main(argv):
       elif opt in ("-c", "--action"):
          case_action = arg
 
-
    print ('original stringToUpdateing:', stringToUpdate);
    print ('action is:', case_action);
-
 
    stringToUpdate = stringUpdate(stringToUpdate, case_action);
    print('Updated stringToUpdateing:', stringToUpdate)
 
 if __name__ == "__main__":
    case_action = main(sys.argv[1:])
-   
-   
