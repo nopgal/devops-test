@@ -19,7 +19,8 @@ def main():
         case 'uppercase':
             stringToUpdate = stringToUpdate.upper();
         case 'camelcase':
-            stringToUpdate = sub(r"(_|-)+", " ", stringToUpdate).title().replace(" ", "");
+            strTmp = sub(r"(_|-)+", " ", stringToUpdate).title().replace(" ", "");   
+            stringToUpdate = ''.join([strTmp[0].lower(), strTmp[1:]])
         case _:    
             stringToUpdate = stringToUpdate;
 
