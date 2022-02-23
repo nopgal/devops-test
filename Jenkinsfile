@@ -15,7 +15,7 @@ pipeline {
             }
         }
         
-         stage('docker build') {
+         stage('docker run') {
             steps {
                 echo "docker build -t python_update_str ."
                 bat(returnStdout: true, script: "docker run -p 5000:5000 -d update_str_img")
