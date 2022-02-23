@@ -18,7 +18,7 @@ pipeline {
         stage('docker stop old container image') {
             steps {
                 echo "docker stop \$(docker ps -q --filter ancestor=update_str_img )"
-                bat(returnStdout: true, script: "docker stop \$(docker ps -q --filter ancestor=update_str_img )")
+                powershell(returnStdout: true, script: "docker stop \$(docker ps -q --filter ancestor=update_str_img )")
             }
         }
         
